@@ -6,7 +6,10 @@ Servlet接口，初始化，销毁，服务三个方法
 ServletConfig接口，servlet配置信息，获得初始化参数，获得ServletContext
 ServletRegistration接口和ServletRegistration.Dynamic接口，使用ServletContext以编程的方式注册servlet后的返回结果，可以用来对servlet进行进一步的配置
 ServletContext接口，表示web应用的上下文，用来和servlet容器通信，获取全局所有信息
-ServletContainerInitializer接口，servlet容器初始化器，允许一个库或运行时，在一个web应用的启动阶段被通知，可以以编程的方式注册servlet，过滤器，监听器来响应web请求，该接口的实现类必须使用@HandlesTypes注解标注，该注解可以包含若干Class<?>对象参数，web应用中凡是实现了，继承了，被注解了这些Class<?>对象的那些Class对象会被以参数的形式传递进启动方法，称为感兴趣的类，如果没有使用注解或没有发现感兴趣的类，将传递一个null到启动方法，如果该接口的实现类位于一个web的WEB-INF/lib下面，那么只会在该web启动时执行一次，如果位于其它公共位置且可以被发现，那么每个web启动时都会执行一次
+ServletContainerInitializer接口，servlet容器初始化器，允许一个库或运行时，在一个web应用的启动阶段被通知，可以以编程的方式注册servlet，过滤器，
+监听器来响应web请求，该接口的实现类必须使用@HandlesTypes注解标注，该注解可以包含若干Class<?>对象参数，web应用中凡是实现了，继承了，
+被注解了这些Class<?>对象的那些Class对象会被以参数的形式传递进启动方法，称为感兴趣的类，如果没有使用注解或没有发现感兴趣的类，将传递一个null到启动方法，
+如果该接口的实现类位于一个web的WEB-INF/lib下面，那么只会在该web启动时执行一次，如果位于其它公共位置且可以被发现，那么每个web启动时都会执行一次
 ServletRequest接口，表示一个请求
 ServletResponse接口，表示一个响应
 ServletContextListener接口，上下文的初始化，销毁两个方法
